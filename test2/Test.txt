@@ -1,16 +1,1 @@
-export async function get52weeks(symbols: string) {
-  try {
-    const response = await axios.get(
-      `https://api.tradier.com/v1/markets/quotes?symbols=${symbols}&greeks=true`,
-      {
-        headers: {
-          Authorization: "Bearer l5iIo1jHXxXGqGvxrzhecbGr1zQB",
-          Accept: "application/json",
-        },
-      }
-    );
-    return response.data.quotes.quote;
-  } catch (err) {
-    if (err instanceof Error) throw new Error(err.message);
-  }
-}
+
